@@ -54,4 +54,26 @@ $(document).ready(function () {
         $('.point-container div.blue').removeClass('blue');
         $('.point-container .point:nth-child(2)').addClass('blue');
     });
+    
+    $('.point-container .point').eq(2).click(function(){
+        $('.container img.active').removeClass('active');
+        $('.container img:nth-child(4)').addClass('active');
+        $('.point-container div.blue').removeClass('blue');
+        $('.point-container .point:nth-child(3)').addClass('blue');
+    });
+
+    $('.point-container .point').eq(3).click(function(){
+        $('.container img.active').removeClass('active');
+        $('.container img:nth-child(5)').addClass('active');
+        $('.point-container div.blue').removeClass('blue');
+        $('.point-container .point:nth-child(4)').addClass('blue');
+    });
+
+    $('.point-container .point').eq(4).click(function(){
+        $('.container img.active').removeClass('active');
+        $('.container img:nth-child(6)').addClass('active');
+        $('.point-container div.blue').removeClass('blue');
+        $('.point-container .point:nth-child(5)').addClass('blue');
+    });
+
 });
