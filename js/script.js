@@ -6,7 +6,6 @@ $(document).ready(function () {
         var spostamento = $('.container img.active');
         spostamento.removeClass('active');
         spostamento.next().addClass('active');
-        console.log(spostamento);
 
         //evidenziazione pallini
 
@@ -18,7 +17,6 @@ $(document).ready(function () {
             $('.container img.first').addClass('active');
             $('.point-container .first').addClass('blue');
         };
-
     });
 
     // spostamento con freccia di sinistra
@@ -27,7 +25,6 @@ $(document).ready(function () {
         var spostamento = $('.container img.active');
         spostamento.removeClass('active');
         spostamento.prev().addClass('active');
-        console.log(spostamento);
 
         //evidenziazione pallino
 
@@ -41,39 +38,55 @@ $(document).ready(function () {
         };
     });
 
-    $('.point-container .point').eq(0).click(function(){
-        $('.container img.active').removeClass('active');
-        $('.container img:nth-child(2)').addClass('active');
-        $('.point-container div.blue').removeClass('blue');
-        $('.point-container .point:nth-child(1)').addClass('blue');
-    });
+    // $('.point-container .point').eq(0).click(function(){
+    //     $('.container img.active').removeClass('active');
+    //     $('.container img:nth-child(2)').addClass('active');
+    //     $('.point-container div.blue').removeClass('blue');
+    //     $('.point-container .point:nth-child(1)').addClass('blue');
+    // });
 
-    $('.point-container .point').eq(1).click(function(){
-        $('.container img.active').removeClass('active');
-        $('.container img:nth-child(3)').addClass('active');
-        $('.point-container div.blue').removeClass('blue');
-        $('.point-container .point:nth-child(2)').addClass('blue');
-    });
+    // $('.point-container .point').eq(1).click(function(){
+    //     $('.container img.active').removeClass('active');
+    //     $('.container img:nth-child(3)').addClass('active');
+    //     $('.point-container div.blue').removeClass('blue');
+    //     $('.point-container .point:nth-child(2)').addClass('blue');
+    // });
     
-    $('.point-container .point').eq(2).click(function(){
-        $('.container img.active').removeClass('active');
-        $('.container img:nth-child(4)').addClass('active');
-        $('.point-container div.blue').removeClass('blue');
-        $('.point-container .point:nth-child(3)').addClass('blue');
-    });
+    // $('.point-container .point').eq(2).click(function(){
+    //     $('.container img.active').removeClass('active');
+    //     $('.container img:nth-child(4)').addClass('active');
+    //     $('.point-container div.blue').removeClass('blue');
+    //     $('.point-container .point:nth-child(3)').addClass('blue');
+    // });
 
-    $('.point-container .point').eq(3).click(function(){
-        $('.container img.active').removeClass('active');
-        $('.container img:nth-child(5)').addClass('active');
-        $('.point-container div.blue').removeClass('blue');
-        $('.point-container .point:nth-child(4)').addClass('blue');
-    });
+    // $('.point-container .point').eq(3).click(function(){
+    //     $('.container img.active').removeClass('active');
+    //     $('.container img:nth-child(5)').addClass('active');
+    //     $('.point-container div.blue').removeClass('blue');
+    //     $('.point-container .point:nth-child(4)').addClass('blue');
+    // });
 
-    $('.point-container .point').eq(4).click(function(){
-        $('.container img.active').removeClass('active');
-        $('.container img:nth-child(6)').addClass('active');
-        $('.point-container div.blue').removeClass('blue');
-        $('.point-container .point:nth-child(5)').addClass('blue');
-    });
+    // $('.point-container .point').eq(4).click(function(){
+    //     $('.container img.active').removeClass('active');
+    //     $('.container img:nth-child(6)').addClass('active');
+    //     $('.point-container div.blue').removeClass('blue');
+    //     $('.point-container .point:nth-child(5)').addClass('blue');
+    // });
+    
+    
+    $('.point-container .point').click(function(){
+    var index = $(this).index();
+    console.log(index);
+    $('.container img.active').removeClass('active');
+    $('.container img').eq(index).addClass('active');
+    $('.point-container div.blue').removeClass('blue');
+    $('.point-container .point').eq(index).addClass('blue');
+});
 
 });
+
+
+
+
+
+
